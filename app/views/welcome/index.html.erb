@@ -1,0 +1,32 @@
+<table class="table table-striped">
+  <tr>
+    <th>Time</th>
+    <th>Room</th>
+    <th>Section</th>
+    <th>Subject</th>
+    <th>Professor</th>
+  </tr>
+  <% @sections_slots.each do |entry| %>
+    <tr>
+      <td>
+        <%= entry.slot.time %>
+      </td>
+
+      <td>
+        <%= entry.venue_name %>
+      </td>
+
+      <td>
+        <%= entry.section_level + " " + entry.section_name + " "+ entry.section_course %>
+      </td>
+
+      <td>
+        <%= entry.subject_name %>
+      </td>
+
+      <td>
+        <%= entry.professor_name %>
+      </td>
+    </tr>
+  <% end %>
+</table>
